@@ -221,13 +221,13 @@
               </a>
               <ul class="nav nav-treeview">
                 <li class="nav-item">
-                  <a href="<?= base_url(); ?>jurusan" class="nav-link">
+                  <a href="<?= base_url(); ?>jurusan" class="nav-link <?= url_is('jurusan') ? 'active' : ''; ?>">
                     <i class="far fa-file nav-icon"></i>
                     <p>Jurusan</p>
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a href="<?= base_url(); ?>prodi" class="nav-link">
+                  <a href="<?= base_url(); ?>prodi" class="nav-link <?= url_is('prodi') ? 'active' : ''; ?>">
                     <i class="fa fa-graduation-cap nav-icon"></i>
                     <p>Prodi</p>
                   </a>
@@ -271,6 +271,7 @@
   <script src="<?= base_url() ?>assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
   <!-- AdminLTE App -->
   <script src="<?= base_url() ?>assets/dist/js/adminlte.min.js"></script>
+  <?= $this->renderSection('scripts'); ?>
 </body>
 
 </html>

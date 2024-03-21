@@ -4,19 +4,17 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class ModelMahasiswa extends Model
+class ModelJurusan extends Model
 {
-    protected $DBgroup          = 'default';
-    protected $table            = 't_mahasiswa';
-    protected $primaryKey       = 'nim';
-    protected $useAutoIncrement = false;
-    protected $insertID         = 0;
+    protected $table            = 't_jurusan';
+    protected $primaryKey       = 'id';
+    protected $useAutoIncrement = true;
     protected $returnType       = 'array';
+    protected $useSoftDeletes   = false;
     protected $protectFields    = true;
     protected $allowedFields    = [
-        "nim", "nama", "alamat", "jenkel", "id_jurusan", "kode_prodi"
+        "nama_jurusan"
     ];
-
 
     protected bool $allowEmptyInserts = false;
 
